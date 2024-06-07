@@ -28,10 +28,11 @@
             header("VariablerOgOperatører");
 
             Console.WriteLine("1.Udskriv længden af strengen “C# Bogen Opgaver”");
-
+            
             string streng = "C# Bogen Opgaver";
-
+            Console.WriteLine(streng.Length);
             Console.WriteLine("2. Lav et program som skriver et tilfældigt tal ud i konsollen");
+            Random random = new Random(1);
 
             Console.WriteLine("3. Skriv en variable ind i en streng ved brug af $-tegnet");
 
