@@ -1,4 +1,6 @@
-﻿namespace Start
+﻿using System.ComponentModel.Design;
+
+namespace Start
 {
     internal class Program
     {
@@ -32,13 +34,16 @@
             string streng = "C# Bogen Opgaver";
             Console.WriteLine(streng.Length);
             Console.WriteLine("2. Lav et program som skriver et tilfældigt tal ud i konsollen");
-            Random random = new Random(1);
+            Console.WriteLine("Jeg udskriver et tilfældigt tal mellem 0 og 99");
+            Random rng = new Random();
+            int rand1 = rng.Next(100);
+            Console.WriteLine(rand1);
 
             Console.WriteLine("3. Skriv en variable ind i en streng ved brug af $-tegnet");
 
             string input = "Indsæt mig i en anden streng";
 
-            Console.WriteLine("Indsæt input herefter: ");
+            Console.WriteLine($"Indsæt input herefter: {input}");
         }
 
 
@@ -47,14 +52,90 @@
             header("Conditionals - If / Else statements");
 
             Console.WriteLine("1. I skal skrive et stykke kode som fortæller om et tal (int) er lige eller ulige");
+            Random rng = new Random();
+            int rand1 = rng.Next(100);
+            Console.WriteLine(rand1);
+            if (rand1 % 2 == 0)
+            {
+                Console.WriteLine("The number is even.");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd.");
+            }
 
             Console.WriteLine("2. 1. I skal skrive et stykke kode som fortæller om 5 går op i det tal som i vælger (int). \n Hvis den går op i det skal i skrive: 5 går op i (det tal i har valgt)");
+            Random rng2 = new Random();
+            int rand2 = rng2.Next(100);
+            Console.WriteLine(rand2);
+            if (rand2 % 5 == 0)
+            {
+                Console.WriteLine($"ja 5 går op i {rand2}");
+            }
+            else
+            {
+                Console.WriteLine($"nej 5 går ikke op i {rand2}");
+            }
 
             Console.WriteLine("3. Lav opgave 2 igen, men i stedet for selv at vælge et tal skal i lave sådan at den selv vælger et tal mellem 0 og 100.");
-
+            Random rng3 = new Random();
+            int rand3 = rng2.Next(100);
+            Console.WriteLine(rand3);
+            if (rand3 % 5 == 0)
+            {
+                Console.WriteLine($"ja 5 går op i {rand3}");
+            }
+            else
+            {
+                Console.WriteLine($"nej 5 går ikke op i {rand3}");
+            }
             Console.WriteLine("4. Lav et program som fortæller jer hvilke af de her 3 tal der er størst.\r\n a = 25; b = 33; c = 12;");
+            int a = 25;
+            int b = 33;
+            int c = 12;
+            if (a > b && a > c)
+            {
+                Console.WriteLine($"a er størst({a})");
+            }
+            else if (b > a && b > c)
+            { 
+                Console.WriteLine($"b er størst({b})"); 
+            }        
+            else
+            {
+                Console.WriteLine($"c er størst({c})");
+            }
 
             Console.WriteLine("5. Lav et program der fortæller hvor varmt det er ud fra en temperatur. Kategorierne er som følger:\r\n- Hvis det er 0° eller under, skal der skrives: Det er frostvejr\r\n- Hvis det er mellem 1° og 10°, skal der skrives: Det er meget koldt\r\n- Hvis det er mellem 11° og 20°, skal der skrives: Det er koldt\r\n- Hvis det er mellem 21° og 30°, skal der skrives: Det er normalt vejr\r\n- Hvis det er mellem 31° og 40°, skal der skrives: Det er varmt\r\n- Hvis det er 41° eller over, skal der skrives: Det er meget varmt");
+            Random temprng = new Random();
+            int temp = temprng.Next(50);
+            Console.WriteLine(temp);
+            string output = "";
+            if (temp <= 0)
+            {
+                 output = "frost";
+            }
+            else if (temp >= 1 && temp <= 10)
+            {
+                output = "meget koldt";
+            }
+            else if (temp >= 11 && temp <= 20)
+            {
+                output = "koldt";
+            }
+            else if (temp >= 21 && temp <= 30)
+            {
+                output = "normalt";
+            }
+            else if (temp >= 31 && temp <= 40)
+            {
+                output = "varmt";
+            }
+            else
+            {
+                output = "meget varmt";
+            }
+            Console.WriteLine($"der er {output} vejr og der er {temp} grader");
 
             Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
 
