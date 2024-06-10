@@ -138,34 +138,65 @@ namespace Start
             Console.WriteLine($"der er {output} vejr og der er {temp} grader");
 
             Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
-
+            Random ugedagrng = new Random();
+            int ugedag = ugedagrng.Next(7);
+            Console.WriteLine(ugedag);
+            if (ugedag == 0)
+            {
+                while (ugedag == 0)
+                {
+                    ugedag = ugedagrng.Next(7);
+                }
+            }
+            switch (ugedag)
+            {
+                case 1:
+                    Console.WriteLine("Mandag");
+                break;
+                case 2:
+                    Console.WriteLine("Tirsdag");
+                break;
+                case 3:
+                    Console.WriteLine("Onsdag");
+                break;
+                case 4:
+                    Console.WriteLine("Torsdag");
+                break;
+                case 5:
+                    Console.WriteLine("Fredag");
+                break;
+                case 6:
+                    Console.WriteLine("Lørdag");
+                break;
+                case 7:
+                    Console.WriteLine("Søndag");
+                break;
+            }
         }
         static void Arrays()
         {
             header("Arrays");
 
             Console.WriteLine("1. Skriv “Viborg” i konsollen ved at trække den ud fra følgende array");
-
             List<string> byer1 = new List<string> { "Randers", "Viborg", "Aarhus", "København" };
+            Console.WriteLine(byer1[1]);
 
             Console.WriteLine("2. Tilføj “Skive” til denne array");
-
             List<string> byer2 = new List<string> { "Randers", "Viborg", "Aarhus", "København" };
+            byer2.Add("Skive");
 
             Console.WriteLine("3. Erstat den værdi, uden at ændre direkte i listen, som ikke passer ind, så listen stemmer");
-
             List<int> talrække1 = new List<int> { 0, 1, 0, 3, 4, 5, 6 };
+            talrække1[2] = 2;
 
             Console.WriteLine("4. Skriv, i konsollen, den største værdi fra følgende liste. Selvfølgelig ikke manuelt");
-
             List<int> talrække2 = new List<int> { 1, 2, 3, 4, 11, 55, 99, 100 };
+            for ()
 
             Console.WriteLine("5. Sorter den her liste:");
-
             List<int> talrække3 = new List<int> { 0, 12, 0, 22, 300, 4, 5 };
 
             Console.WriteLine("6. Sorter den her liste i omvendt rækkefølge:");
-
             List<int> talrække4 = new List<int> { 0, 12, 0, 22, 300, 4, 5 };
         }
         static void LoopsMedArraysOgAndreDatatyper()
