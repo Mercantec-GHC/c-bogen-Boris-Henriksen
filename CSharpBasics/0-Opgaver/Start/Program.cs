@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.Design;
-
+using System.Collections.Generic;
 namespace Start
 {
     internal class Program
@@ -191,10 +191,14 @@ namespace Start
 
             Console.WriteLine("4. Skriv, i konsollen, den største værdi fra følgende liste. Selvfølgelig ikke manuelt");
             List<int> talrække2 = new List<int> { 1, 2, 3, 4, 11, 55, 99, 100 };
-            for ()
+            
 
             Console.WriteLine("5. Sorter den her liste:");
             List<int> talrække3 = new List<int> { 0, 12, 0, 22, 300, 4, 5 };
+
+            talrække3.Sort();
+            
+            Console.WriteLine(talrække3);
 
             Console.WriteLine("6. Sorter den her liste i omvendt rækkefølge:");
             List<int> talrække4 = new List<int> { 0, 12, 0, 22, 300, 4, 5 };
